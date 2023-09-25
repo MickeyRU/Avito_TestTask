@@ -16,6 +16,8 @@
 		BE7D1A142AC18D6E007518F9 /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7D1A132AC18D6E007518F9 /* ProductCell.swift */; };
 		BE7D1A192AC18E18007518F9 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7D1A182AC18E18007518F9 /* UIView+Extensions.swift */; };
 		BE7D1A1C2AC1A2DE007518F9 /* CollectionViewConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7D1A1B2AC1A2DE007518F9 /* CollectionViewConfiguration.swift */; };
+		BE7D1A212AC1B03C007518F9 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7D1A202AC1B03C007518F9 /* Colors.swift */; };
+		BE7D1A232AC1B042007518F9 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7D1A222AC1B042007518F9 /* Fonts.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		BE7D1A132AC18D6E007518F9 /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
 		BE7D1A182AC18E18007518F9 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		BE7D1A1B2AC1A2DE007518F9 /* CollectionViewConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewConfiguration.swift; sourceTree = "<group>"; };
+		BE7D1A202AC1B03C007518F9 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		BE7D1A222AC1B042007518F9 /* Fonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,10 +66,9 @@
 		BE7D19FA2AC184B1007518F9 /* Avito_TestTask */ = {
 			isa = PBXGroup;
 			children = (
+				BE7D1A1F2AC1B001007518F9 /* DesignSystem */,
 				BE7D1A0F2AC188F9007518F9 /* Application */,
-				BE7D19FF2AC184B2007518F9 /* ProductsListViewController.swift */,
-				BE7D1A132AC18D6E007518F9 /* ProductCell.swift */,
-				BE7D1A112AC18C2F007518F9 /* ProductListViewModel.swift */,
+				BE7D1A1E2AC1A7BD007518F9 /* Screens */,
 				BE7D1A172AC18E06007518F9 /* Extensions */,
 				BE7D1A1A2AC1A29A007518F9 /* Helpers */,
 				BE7D1A102AC1890C007518F9 /* SupportFiles */,
@@ -106,6 +109,33 @@
 				BE7D1A1B2AC1A2DE007518F9 /* CollectionViewConfiguration.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		BE7D1A1D2AC1A7A5007518F9 /* ProductList */ = {
+			isa = PBXGroup;
+			children = (
+				BE7D19FF2AC184B2007518F9 /* ProductsListViewController.swift */,
+				BE7D1A132AC18D6E007518F9 /* ProductCell.swift */,
+				BE7D1A112AC18C2F007518F9 /* ProductListViewModel.swift */,
+			);
+			path = ProductList;
+			sourceTree = "<group>";
+		};
+		BE7D1A1E2AC1A7BD007518F9 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				BE7D1A1D2AC1A7A5007518F9 /* ProductList */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		BE7D1A1F2AC1B001007518F9 /* DesignSystem */ = {
+			isa = PBXGroup;
+			children = (
+				BE7D1A202AC1B03C007518F9 /* Colors.swift */,
+				BE7D1A222AC1B042007518F9 /* Fonts.swift */,
+			);
+			path = DesignSystem;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -179,11 +209,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				BE7D1A1C2AC1A2DE007518F9 /* CollectionViewConfiguration.swift in Sources */,
+				BE7D1A212AC1B03C007518F9 /* Colors.swift in Sources */,
 				BE7D1A192AC18E18007518F9 /* UIView+Extensions.swift in Sources */,
 				BE7D1A002AC184B2007518F9 /* ProductsListViewController.swift in Sources */,
 				BE7D19FC2AC184B1007518F9 /* AppDelegate.swift in Sources */,
 				BE7D1A142AC18D6E007518F9 /* ProductCell.swift in Sources */,
 				BE7D1A122AC18C2F007518F9 /* ProductListViewModel.swift in Sources */,
+				BE7D1A232AC1B042007518F9 /* Fonts.swift in Sources */,
 				BE7D19FE2AC184B2007518F9 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

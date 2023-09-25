@@ -5,6 +5,7 @@ final class ProductsListViewController: UIViewController {
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
         collectionView.register(ProductCell.self, forCellWithReuseIdentifier: ProductCell.reuseIdentifier)
         collectionView.dataSource = self
+        collectionView.backgroundColor = UIColor.unWhite
         collectionView.delegate = self
         return collectionView
     }()
@@ -12,7 +13,7 @@ final class ProductsListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = .white
+        view.backgroundColor = UIColor.unWhite
         
         setupViews()
     }
@@ -37,8 +38,8 @@ extension ProductsListViewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ProductCell.reuseIdentifier, for: indexPath)
-        cell.backgroundColor = .red
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ProductCell.reuseIdentifier, for: indexPath) as? ProductCell else { return UICollectionViewCell() }
+        cell.configure()
         return cell
     }
 }
