@@ -5,9 +5,9 @@ final class AdvertisementsListViewController: UIViewController {
     
     private lazy var advertisementsCollectionView: UICollectionView = {
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
+        collectionView.backgroundColor = UIColor.unWhite
         collectionView.register(AdvertisementCell.self, forCellWithReuseIdentifier: AdvertisementCell.reuseIdentifier)
         collectionView.dataSource = self
-        collectionView.backgroundColor = UIColor.unWhite
         collectionView.delegate = self
         return collectionView
     }()
@@ -45,7 +45,7 @@ final class AdvertisementsListViewController: UIViewController {
             advertisementsCollectionView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
             advertisementsCollectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             advertisementsCollectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            advertisementsCollectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+            advertisementsCollectionView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
         ])
     }
 }
@@ -69,8 +69,7 @@ extension AdvertisementsListViewController: UICollectionViewDataSource {
 extension AdvertisementsListViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let configuration = CollectionViewConfiguration.defaultConfiguration
-        let totalSpacing = configuration.sectionInsets.left + configuration.sectionInsets.right + (CGFloat(configuration.numberOfItemsPerRow - 1) * configuration.itemSpacing)
-        let width = (collectionView.bounds.width - totalSpacing) / CGFloat(configuration.numberOfItemsPerRow)
+        let width = (collectionView.bounds.width - CGFloat(configuration.totalSpacing)) / CGFloat(configuration.numberOfItemsPerRow)
         return CGSize(width: width, height: width * 1.5)
     }
     

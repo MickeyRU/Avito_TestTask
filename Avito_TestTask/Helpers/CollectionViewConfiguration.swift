@@ -5,6 +5,15 @@ struct CollectionViewConfiguration {
     let lineSpacing: CGFloat
     let sectionInsets: UIEdgeInsets
     let numberOfItemsPerRow: Int
+    let totalSpacing: CFloat
+    
+    init(itemSpacing: CGFloat, lineSpacing: CGFloat, sectionInsets: UIEdgeInsets, numberOfItemsPerRow: Int) {
+        self.itemSpacing = itemSpacing
+        self.lineSpacing = lineSpacing
+        self.sectionInsets = sectionInsets
+        self.numberOfItemsPerRow = numberOfItemsPerRow
+        self.totalSpacing = CFloat(sectionInsets.left + sectionInsets.right + (CGFloat(numberOfItemsPerRow - 1) * itemSpacing))
+    }
     
     static var defaultConfiguration: CollectionViewConfiguration {
         return CollectionViewConfiguration(itemSpacing: 10,

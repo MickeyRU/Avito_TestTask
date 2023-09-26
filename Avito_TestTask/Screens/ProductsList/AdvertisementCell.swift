@@ -3,41 +3,11 @@ import UIKit
 final class AdvertisementCell: UICollectionViewCell {
     static let reuseIdentifier = "AdvertisementCell"
     
-    private let ImageView: UIImageView = {
-        let imageView = UIImageView()
-        imageView.layer.cornerRadius = 10
-        imageView.clipsToBounds = true
-        imageView.contentMode = .scaleAspectFill
-        return imageView
-    }()
-    
-    private let titleLabel: UILabel = {
-        let label = UILabel()
-        label.textColor = UIColor.unBlack
-        label.font = UIFont.sfRegular15
-        return label
-    }()
-    
-    private let priceLabel: UILabel = {
-        let label = UILabel()
-        label.textColor = UIColor.unBlack
-        label.font = UIFont.sfBold17
-        return label
-    }()
-    
-    private let locationLabel: UILabel = {
-        let label = UILabel()
-        label.font = UIFont.sfRegular13
-        label.textColor = UIColor.unGray
-        return label
-    }()
-    
-    private let createdAtLabel: UILabel = {
-        let label = UILabel()
-        label.font = UIFont.sfRegular13
-        label.textColor = UIColor.unGray
-        return label
-    }()
+    private let ImageView = ViewsFactory.shared.createImageView()
+    private let titleLabel = ViewsFactory.shared.createTextTitleLabel()
+    private let priceLabel = ViewsFactory.shared.createTextPriceLabel()
+    private let locationLabel = ViewsFactory.shared.createTextDescriptionLabel()
+    private let createdAtLabel = ViewsFactory.shared.createTextDescriptionLabel()
     
     override init(frame: CGRect) {
         super.init(frame: frame)

@@ -19,10 +19,11 @@
 		BE7D1A212AC1B03C007518F9 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7D1A202AC1B03C007518F9 /* Colors.swift */; };
 		BE7D1A232AC1B042007518F9 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7D1A222AC1B042007518F9 /* Fonts.swift */; };
 		BE7DF73A2AC2CA74002B6D59 /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7DF7392AC2CA74002B6D59 /* NetworkClient.swift */; };
-		BE7DF73C2AC2CB24002B6D59 /* AdvertisementModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7DF73B2AC2CB24002B6D59 /* AdvertisementModel.swift */; };
+		BE7DF73C2AC2CB24002B6D59 /* AdvertisementsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7DF73B2AC2CB24002B6D59 /* AdvertisementsModel.swift */; };
 		BE7DF73E2AC2CFC7002B6D59 /* URLSession+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7DF73D2AC2CFC7002B6D59 /* URLSession+Extension.swift */; };
 		BE7DF7402AC2D08D002B6D59 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7DF73F2AC2D08D002B6D59 /* Observable.swift */; };
 		BE7DF7422AC2D3FC002B6D59 /* URLRequest+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7DF7412AC2D3FC002B6D59 /* URLRequest+Extension.swift */; };
+		BE7DF7442AC2D9EC002B6D59 /* ViewsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7DF7432AC2D9EC002B6D59 /* ViewsFactory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,10 +41,11 @@
 		BE7D1A202AC1B03C007518F9 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		BE7D1A222AC1B042007518F9 /* Fonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		BE7DF7392AC2CA74002B6D59 /* NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
-		BE7DF73B2AC2CB24002B6D59 /* AdvertisementModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvertisementModel.swift; sourceTree = "<group>"; };
+		BE7DF73B2AC2CB24002B6D59 /* AdvertisementsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvertisementsModel.swift; sourceTree = "<group>"; };
 		BE7DF73D2AC2CFC7002B6D59 /* URLSession+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URLSession+Extension.swift"; sourceTree = "<group>"; };
 		BE7DF73F2AC2D08D002B6D59 /* Observable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 		BE7DF7412AC2D3FC002B6D59 /* URLRequest+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URLRequest+Extension.swift"; sourceTree = "<group>"; };
+		BE7DF7432AC2D9EC002B6D59 /* ViewsFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewsFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +123,7 @@
 			children = (
 				BE7DF73F2AC2D08D002B6D59 /* Observable.swift */,
 				BE7D1A1B2AC1A2DE007518F9 /* CollectionViewConfiguration.swift */,
+				BE7DF7432AC2D9EC002B6D59 /* ViewsFactory.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -156,7 +159,7 @@
 			isa = PBXGroup;
 			children = (
 				BE7DF7392AC2CA74002B6D59 /* NetworkClient.swift */,
-				BE7DF73B2AC2CB24002B6D59 /* AdvertisementModel.swift */,
+				BE7DF73B2AC2CB24002B6D59 /* AdvertisementsModel.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -234,13 +237,14 @@
 				BE7DF7402AC2D08D002B6D59 /* Observable.swift in Sources */,
 				BE7DF7422AC2D3FC002B6D59 /* URLRequest+Extension.swift in Sources */,
 				BE7D1A1C2AC1A2DE007518F9 /* CollectionViewConfiguration.swift in Sources */,
+				BE7DF7442AC2D9EC002B6D59 /* ViewsFactory.swift in Sources */,
 				BE7DF73A2AC2CA74002B6D59 /* NetworkClient.swift in Sources */,
 				BE7D1A212AC1B03C007518F9 /* Colors.swift in Sources */,
 				BE7D1A192AC18E18007518F9 /* UIView+Extensions.swift in Sources */,
 				BE7D1A002AC184B2007518F9 /* AdvertisementsListViewController.swift in Sources */,
 				BE7D19FC2AC184B1007518F9 /* AppDelegate.swift in Sources */,
 				BE7D1A142AC18D6E007518F9 /* AdvertisementCell.swift in Sources */,
-				BE7DF73C2AC2CB24002B6D59 /* AdvertisementModel.swift in Sources */,
+				BE7DF73C2AC2CB24002B6D59 /* AdvertisementsModel.swift in Sources */,
 				BE7DF73E2AC2CFC7002B6D59 /* URLSession+Extension.swift in Sources */,
 				BE7D1A122AC18C2F007518F9 /* AdvertisementsListViewModel.swift in Sources */,
 				BE7D1A232AC1B042007518F9 /* Fonts.swift in Sources */,
