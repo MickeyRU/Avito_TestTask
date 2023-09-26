@@ -1,51 +1,72 @@
 import UIKit
 
-final class ProductsListViewController: UIViewController {
-    private lazy var productsCollectionView: UICollectionView = {
+final class AdvertisementsListViewController: UIViewController {
+    private let viewModel: AdvertisementsListViewModel
+    
+    private lazy var advertisementsCollectionView: UICollectionView = {
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
-        collectionView.register(ProductCell.self, forCellWithReuseIdentifier: ProductCell.reuseIdentifier)
+        collectionView.register(AdvertisementCell.self, forCellWithReuseIdentifier: AdvertisementCell.reuseIdentifier)
         collectionView.dataSource = self
         collectionView.backgroundColor = UIColor.unWhite
         collectionView.delegate = self
         return collectionView
     }()
     
+    init(viewModel: AdvertisementsListViewModel) {
+        self.viewModel = viewModel
+        super.init(nibName: nil, bundle: nil)
+        self.bind()
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = UIColor.unWhite
-        
+        viewModel.viewDidLoad()
         setupViews()
     }
     
+    private func bind() {
+        viewModel.observeProducts { [weak self] _ in
+            guard let self = self else { return }
+            self.advertisementsCollectionView.reloadData()
+        }
+    }
+    
     private func setupViews() {
-        view.addViewWithNoTAMIC(productsCollectionView)
+        view.backgroundColor = UIColor.unWhite
+
+        view.addViewWithNoTAMIC(advertisementsCollectionView)
         
         NSLayoutConstraint.activate([
-            productsCollectionView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-            productsCollectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            productsCollectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            productsCollectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+            advertisementsCollectionView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            advertisementsCollectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            advertisementsCollectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            advertisementsCollectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         ])
     }
 }
 
 // MARK: - UICollectionViewDataSource
 
-extension ProductsListViewController: UICollectionViewDataSource {
+extension AdvertisementsListViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        10
+        viewModel.advertisements.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ProductCell.reuseIdentifier, for: indexPath) as? ProductCell else { return UICollectionViewCell() }
-        cell.configure()
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: AdvertisementCell.reuseIdentifier, for: indexPath) as? AdvertisementCell else { return UICollectionViewCell() }
+        let advertisement = viewModel.advertisements[indexPath.row]
+        cell.configure(advertisement)
         return cell
     }
 }
 
 // MARK: - UICollectionViewFlowLayout
-extension ProductsListViewController: UICollectionViewDelegateFlowLayout {
+extension AdvertisementsListViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let configuration = CollectionViewConfiguration.defaultConfiguration
         let totalSpacing = configuration.sectionInsets.left + configuration.sectionInsets.right + (CGFloat(configuration.numberOfItemsPerRow - 1) * configuration.itemSpacing)

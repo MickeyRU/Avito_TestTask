@@ -1,7 +1,7 @@
 import UIKit
 
-final class ProductCell: UICollectionViewCell {
-    static let reuseIdentifier = "ProductCell"
+final class AdvertisementCell: UICollectionViewCell {
+    static let reuseIdentifier = "AdvertisementCell"
     
     private let ImageView: UIImageView = {
         let imageView = UIImageView()
@@ -49,12 +49,12 @@ final class ProductCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func configure() {
+    func configure(_ advertisement: AdvertisementModel) {
         self.ImageView.image = UIImage(named: "mock1")
-        self.titleLabel.text = "Мотик BMW"
-        self.priceLabel.text = "2 000 Р"
-        self.locationLabel.text = "Москва, Коммунарка"
-        self.createdAtLabel.text = "22 сентиября, 13:25"
+        self.titleLabel.text = advertisement.title
+        self.priceLabel.text = advertisement.price
+        self.locationLabel.text = advertisement.location
+        self.createdAtLabel.text = advertisement.createdDate
     }
     
     private func setupViews() {
