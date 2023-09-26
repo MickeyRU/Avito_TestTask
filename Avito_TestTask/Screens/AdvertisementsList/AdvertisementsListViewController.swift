@@ -59,8 +59,8 @@ extension AdvertisementsListViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: AdvertisementCell.reuseIdentifier, for: indexPath) as? AdvertisementCell else { return UICollectionViewCell() }
-        let advertisement = viewModel.advertisements[indexPath.row]
-        cell.configure(advertisement)
+        let model = viewModel.cellModels[indexPath.row]
+        cell.configure(model)
         return cell
     }
 }

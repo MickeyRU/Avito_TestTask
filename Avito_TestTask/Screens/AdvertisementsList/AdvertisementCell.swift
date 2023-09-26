@@ -19,12 +19,12 @@ final class AdvertisementCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func configure(_ advertisement: AdvertisementModel) {
+    func configure(_ model: AdvertisementCellModel) {
         self.ImageView.image = UIImage(named: "mock1")
-        self.titleLabel.text = advertisement.title
-        self.priceLabel.text = advertisement.price
-        self.locationLabel.text = advertisement.location
-        self.createdAtLabel.text = advertisement.createdDate
+        self.titleLabel.text = model.title
+        self.priceLabel.text = model.formattedPrice
+        self.locationLabel.text = model.location
+        self.createdAtLabel.text = model.formattedDate
     }
     
     private func setupViews() {
