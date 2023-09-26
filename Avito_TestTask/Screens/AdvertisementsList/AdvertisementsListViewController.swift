@@ -1,7 +1,12 @@
 import UIKit
+import ProgressHUD
 
 final class AdvertisementsListViewController: UIViewController {
     private let viewModel: AdvertisementsListViewModelProtocol
+    
+    private lazy var alertService: AlertServiceProtocol = {
+        return AlertService(viewController: self)
+    }()
     
     private lazy var advertisementsCollectionView: UICollectionView = {
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
@@ -30,15 +35,47 @@ final class AdvertisementsListViewController: UIViewController {
     }
     
     private func bind() {
-        viewModel.observeProducts { [weak self] _ in
+        viewModel.observeScreenState { [weak self] screenState in
             guard let self = self else { return }
-            self.advertisementsCollectionView.reloadData()
+            
+            switch screenState {
+            case .loading:
+                self.showLoading()
+            case .error(let errorMessage):
+                self.showError(errorMessage)
+            case .content:
+                self.showContent()
+            }
         }
+    }
+    
+    private func showLoading() {
+        ProgressHUD.show()
+    }
+    
+    private func hideLoading() {
+        ProgressHUD.dismiss()
+    }
+    
+    private func showError(_ errorMessage: String) {
+        self.hideLoading()
+
+        let reloadAction = UIAlertAction(title: "Перезагрузить", style: .default) { _ in
+            self.viewModel.viewDidLoad()
+        }
+        let alert = UIAlertController(title: "Не удалось загрузить данные", message: errorMessage, preferredStyle: .alert)
+        alert.addAction(reloadAction)
+        present(alert, animated: true)
+    }
+    
+    private func showContent() {
+        self.hideLoading()
+        self.advertisementsCollectionView.reloadData()
     }
     
     private func setupViews() {
         view.backgroundColor = UIColor.unWhite
-
+        
         view.addViewWithNoTAMIC(advertisementsCollectionView)
         
         NSLayoutConstraint.activate([

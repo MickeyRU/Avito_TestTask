@@ -21,6 +21,7 @@ final class AdvertisementCell: UICollectionViewCell {
     }
     
     func configure(_ model: AdvertisementCellModel) {
+        self.imageView.kf.indicatorType = .activity
         self.imageView.kf.setImage(with: URL(string: model.imageUrl))
         self.titleLabel.text = model.title
         self.priceLabel.text = model.formattedPrice

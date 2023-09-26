@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BE45CB9B2AC2FD26009C5511 /* ScreenState.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE45CB9A2AC2FD26009C5511 /* ScreenState.swift */; };
+		BE45CB9D2AC303AA009C5511 /* AlertService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE45CB9C2AC303A9009C5511 /* AlertService.swift */; };
+		BE45CBA02AC30721009C5511 /* ProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = BE45CB9F2AC30721009C5511 /* ProgressHUD */; };
 		BE7D19FC2AC184B1007518F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7D19FB2AC184B1007518F9 /* AppDelegate.swift */; };
 		BE7D19FE2AC184B2007518F9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7D19FD2AC184B2007518F9 /* SceneDelegate.swift */; };
 		BE7D1A002AC184B2007518F9 /* AdvertisementsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7D19FF2AC184B2007518F9 /* AdvertisementsListViewController.swift */; };
@@ -32,6 +35,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BE45CB9A2AC2FD26009C5511 /* ScreenState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenState.swift; sourceTree = "<group>"; };
+		BE45CB9C2AC303A9009C5511 /* AlertService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertService.swift; sourceTree = "<group>"; };
 		BE7D19F82AC184B1007518F9 /* Avito_TestTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Avito_TestTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE7D19FB2AC184B1007518F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BE7D19FD2AC184B2007518F9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +68,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BE7DF7502AC2FB03002B6D59 /* Kingfisher in Frameworks */,
+				BE45CBA02AC30721009C5511 /* ProgressHUD in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -133,9 +139,11 @@
 		BE7D1A1A2AC1A29A007518F9 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				BE45CB9C2AC303A9009C5511 /* AlertService.swift */,
 				BE7DF73F2AC2D08D002B6D59 /* Observable.swift */,
 				BE7D1A1B2AC1A2DE007518F9 /* CollectionViewConfiguration.swift */,
 				BE7DF7432AC2D9EC002B6D59 /* ViewsFactory.swift */,
+				BE45CB9A2AC2FD26009C5511 /* ScreenState.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -204,6 +212,7 @@
 			name = Avito_TestTask;
 			packageProductDependencies = (
 				BE7DF74F2AC2FB03002B6D59 /* Kingfisher */,
+				BE45CB9F2AC30721009C5511 /* ProgressHUD */,
 			);
 			productName = Avito_TestTask;
 			productReference = BE7D19F82AC184B1007518F9 /* Avito_TestTask.app */;
@@ -235,6 +244,7 @@
 			mainGroup = BE7D19EF2AC184B1007518F9;
 			packageReferences = (
 				BE7DF74E2AC2FB02002B6D59 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				BE45CB9E2AC30721009C5511 /* XCRemoteSwiftPackageReference "ProgressHUD" */,
 			);
 			productRefGroup = BE7D19F92AC184B1007518F9 /* Products */;
 			projectDirPath = "";
@@ -267,6 +277,7 @@
 				BE7DF7422AC2D3FC002B6D59 /* URLRequest+Extension.swift in Sources */,
 				BE7D1A1C2AC1A2DE007518F9 /* CollectionViewConfiguration.swift in Sources */,
 				BE7DF7482AC2E421002B6D59 /* DateFormatters+Presets.swift in Sources */,
+				BE45CB9B2AC2FD26009C5511 /* ScreenState.swift in Sources */,
 				BE7DF7442AC2D9EC002B6D59 /* ViewsFactory.swift in Sources */,
 				BE7DF73A2AC2CA74002B6D59 /* NetworkClient.swift in Sources */,
 				BE7DF7462AC2DD49002B6D59 /* AdvertisementsService.swift in Sources */,
@@ -274,6 +285,7 @@
 				BE7D1A192AC18E18007518F9 /* UIView+Extension.swift in Sources */,
 				BE7D1A002AC184B2007518F9 /* AdvertisementsListViewController.swift in Sources */,
 				BE7DF74A2AC2E426002B6D59 /* NumberFormatter+Presets.swift in Sources */,
+				BE45CB9D2AC303AA009C5511 /* AlertService.swift in Sources */,
 				BE7D19FC2AC184B1007518F9 /* AppDelegate.swift in Sources */,
 				BE7D1A142AC18D6E007518F9 /* AdvertisementCell.swift in Sources */,
 				BE7DF73C2AC2CB24002B6D59 /* AdvertisementsModel.swift in Sources */,
@@ -503,6 +515,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		BE45CB9E2AC30721009C5511 /* XCRemoteSwiftPackageReference "ProgressHUD" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/relatedcode/ProgressHUD";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 13.7.2;
+			};
+		};
 		BE7DF74E2AC2FB02002B6D59 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/onevcat/Kingfisher";
@@ -514,6 +534,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		BE45CB9F2AC30721009C5511 /* ProgressHUD */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BE45CB9E2AC30721009C5511 /* XCRemoteSwiftPackageReference "ProgressHUD" */;
+			productName = ProgressHUD;
+		};
 		BE7DF74F2AC2FB03002B6D59 /* Kingfisher */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = BE7DF74E2AC2FB02002B6D59 /* XCRemoteSwiftPackageReference "Kingfisher" */;
