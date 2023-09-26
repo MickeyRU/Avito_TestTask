@@ -3,9 +3,9 @@ import UIKit
 final class ViewsFactory {
     static let shared = ViewsFactory()
     
-    func createImageView() -> UIImageView {
+    func createImageView(cornerRadius: CGFloat) -> UIImageView {
         let imageView = UIImageView()
-        imageView.layer.cornerRadius = 10
+        imageView.layer.cornerRadius = cornerRadius
         imageView.clipsToBounds = true
         imageView.contentMode = .scaleAspectFill
         return imageView

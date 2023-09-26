@@ -10,7 +10,7 @@ protocol AdvertisementsListViewModelProtocol {
 }
 
 final class AdvertisementsListViewModel: AdvertisementsListViewModelProtocol {
-    private let service: AdvertisementsService
+    private let service: AdvertisementsListService
     
     @Observable
     private (set) var screenState: ScreenState = .loading
@@ -18,7 +18,7 @@ final class AdvertisementsListViewModel: AdvertisementsListViewModelProtocol {
     private (set) var advertisements: [AdvertisementModel] = []
     private (set) var cellModels: [AdvertisementCellModel] = []
 
-    init(service: AdvertisementsService = AdvertisementsService()) {
+    init(service: AdvertisementsListService = AdvertisementsListService()) {
         self.service = service
     }
     

@@ -1,10 +1,8 @@
 import UIKit
 import Kingfisher
 
-final class AdvertisementCell: UICollectionViewCell {
-    static let reuseIdentifier = "AdvertisementCell"
-    
-    private let imageView = ViewsFactory.shared.createImageView()
+final class AdvertisementCell: UICollectionViewCell, ReuseIdentifying {    
+    private let imageView = ViewsFactory.shared.createImageView(cornerRadius: 10)
     private let titleLabel = ViewsFactory.shared.createTextTitleLabel()
     private let priceLabel = ViewsFactory.shared.createTextPriceLabel()
     private let locationLabel = ViewsFactory.shared.createTextDescriptionLabel()

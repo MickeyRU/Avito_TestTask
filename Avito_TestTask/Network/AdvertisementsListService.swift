@@ -1,6 +1,6 @@
 import Foundation
 
-final class AdvertisementsService {
+final class AdvertisementsListService {
     private let urlStringForMainScreen =  "https://www.avito.st/s/interns-ios/main-page.json"
     
     func getAdvertisements(completion: @escaping (Result<AdvertisementsModel, Error>) -> Void) {

@@ -11,7 +11,7 @@ final class AdvertisementsListViewController: UIViewController {
     private lazy var advertisementsCollectionView: UICollectionView = {
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
         collectionView.backgroundColor = UIColor.unWhite
-        collectionView.register(AdvertisementCell.self, forCellWithReuseIdentifier: AdvertisementCell.reuseIdentifier)
+        collectionView.register(AdvertisementCell.self)
         collectionView.dataSource = self
         collectionView.delegate = self
         return collectionView
@@ -100,7 +100,7 @@ extension AdvertisementsListViewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: AdvertisementCell.reuseIdentifier, for: indexPath) as? AdvertisementCell else { return UICollectionViewCell() }
+        let cell: AdvertisementCell = collectionView.dequeueReusableCell(indexPath: indexPath)
         let model = viewModel.cellModels[indexPath.row]
         cell.configure(model)
         return cell
@@ -129,7 +129,7 @@ extension AdvertisementsListViewController: UICollectionViewDelegateFlowLayout {
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let destinationVC = AdvertisementDetailsViewController()
+        let destinationVC = AdvertisementDetailsViewController(viewModel: AdvertisementDetailsViewModel(advertisementID: viewModel.advertisements[indexPath.row].id))
         navigationController?.pushViewController(destinationVC, animated: true)
         // Сделать роутер
     }
