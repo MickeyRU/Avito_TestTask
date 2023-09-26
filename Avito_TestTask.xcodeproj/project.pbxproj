@@ -10,6 +10,7 @@
 		BE45CB9B2AC2FD26009C5511 /* ScreenState.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE45CB9A2AC2FD26009C5511 /* ScreenState.swift */; };
 		BE45CB9D2AC303AA009C5511 /* AlertService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE45CB9C2AC303A9009C5511 /* AlertService.swift */; };
 		BE45CBA02AC30721009C5511 /* ProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = BE45CB9F2AC30721009C5511 /* ProgressHUD */; };
+		BE45CBA22AC30AAD009C5511 /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE45CBA12AC30AAD009C5511 /* MainNavigationController.swift */; };
 		BE7D19FC2AC184B1007518F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7D19FB2AC184B1007518F9 /* AppDelegate.swift */; };
 		BE7D19FE2AC184B2007518F9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7D19FD2AC184B2007518F9 /* SceneDelegate.swift */; };
 		BE7D1A002AC184B2007518F9 /* AdvertisementsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7D19FF2AC184B2007518F9 /* AdvertisementsListViewController.swift */; };
@@ -37,6 +38,7 @@
 /* Begin PBXFileReference section */
 		BE45CB9A2AC2FD26009C5511 /* ScreenState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenState.swift; sourceTree = "<group>"; };
 		BE45CB9C2AC303A9009C5511 /* AlertService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertService.swift; sourceTree = "<group>"; };
+		BE45CBA12AC30AAD009C5511 /* MainNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationController.swift; sourceTree = "<group>"; };
 		BE7D19F82AC184B1007518F9 /* Avito_TestTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Avito_TestTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE7D19FB2AC184B1007518F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BE7D19FD2AC184B2007518F9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -162,8 +164,9 @@
 		BE7D1A1E2AC1A7BD007518F9 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				BE7DF74D2AC2F10F002B6D59 /* AdvertisementsDetails */,
+				BE45CBA12AC30AAD009C5511 /* MainNavigationController.swift */,
 				BE7D1A1D2AC1A7A5007518F9 /* AdvertisementsList */,
+				BE7DF74D2AC2F10F002B6D59 /* AdvertisementsDetails */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -286,6 +289,7 @@
 				BE7D1A002AC184B2007518F9 /* AdvertisementsListViewController.swift in Sources */,
 				BE7DF74A2AC2E426002B6D59 /* NumberFormatter+Presets.swift in Sources */,
 				BE45CB9D2AC303AA009C5511 /* AlertService.swift in Sources */,
+				BE45CBA22AC30AAD009C5511 /* MainNavigationController.swift in Sources */,
 				BE7D19FC2AC184B1007518F9 /* AppDelegate.swift in Sources */,
 				BE7D1A142AC18D6E007518F9 /* AdvertisementCell.swift in Sources */,
 				BE7DF73C2AC2CB24002B6D59 /* AdvertisementsModel.swift in Sources */,

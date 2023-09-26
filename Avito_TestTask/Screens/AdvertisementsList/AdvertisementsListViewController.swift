@@ -34,6 +34,11 @@ final class AdvertisementsListViewController: UIViewController {
         setupViews()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: animated)
+    }
+    
     private func bind() {
         viewModel.observeScreenState { [weak self] screenState in
             guard let self = self else { return }
@@ -59,7 +64,7 @@ final class AdvertisementsListViewController: UIViewController {
     
     private func showError(_ errorMessage: String) {
         self.hideLoading()
-
+        
         let reloadAction = UIAlertAction(title: "Перезагрузить", style: .default) { _ in
             self.viewModel.viewDidLoad()
         }
@@ -103,6 +108,7 @@ extension AdvertisementsListViewController: UICollectionViewDataSource {
 }
 
 // MARK: - UICollectionViewFlowLayout
+
 extension AdvertisementsListViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let configuration = CollectionViewConfiguration.defaultConfiguration
@@ -120,5 +126,9 @@ extension AdvertisementsListViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         CollectionViewConfiguration.defaultConfiguration.lineSpacing
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
     }
 }

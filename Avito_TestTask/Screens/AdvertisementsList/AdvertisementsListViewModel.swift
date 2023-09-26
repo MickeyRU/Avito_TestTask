@@ -8,6 +8,7 @@ protocol AdvertisementsListViewModelProtocol {
     func observeScreenState(_ handler: @escaping (ScreenState) -> Void)
     func viewDidLoad()
 }
+
 final class AdvertisementsListViewModel: AdvertisementsListViewModelProtocol {
     private let service: AdvertisementsService
     
