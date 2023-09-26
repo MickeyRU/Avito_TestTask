@@ -38,7 +38,7 @@ final class AdvertisementCell: UICollectionViewCell {
             
             titleLabel.topAnchor.constraint(equalTo: ImageView.bottomAnchor, constant: 5),
             titleLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
-            titleLabel.widthAnchor.constraint(equalTo: ImageView.widthAnchor, multiplier: 0.6),
+            titleLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
             
             priceLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 5),
             priceLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),

@@ -1,7 +1,7 @@
 import UIKit
 
 final class AdvertisementsListViewController: UIViewController {
-    private let viewModel: AdvertisementsListViewModel
+    private let viewModel: AdvertisementsListViewModelProtocol
     
     private lazy var advertisementsCollectionView: UICollectionView = {
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
@@ -12,7 +12,7 @@ final class AdvertisementsListViewController: UIViewController {
         return collectionView
     }()
     
-    init(viewModel: AdvertisementsListViewModel) {
+    init(viewModel: AdvertisementsListViewModelProtocol) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
         self.bind()

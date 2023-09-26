@@ -24,6 +24,7 @@
 		BE7DF7402AC2D08D002B6D59 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7DF73F2AC2D08D002B6D59 /* Observable.swift */; };
 		BE7DF7422AC2D3FC002B6D59 /* URLRequest+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7DF7412AC2D3FC002B6D59 /* URLRequest+Extension.swift */; };
 		BE7DF7442AC2D9EC002B6D59 /* ViewsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7DF7432AC2D9EC002B6D59 /* ViewsFactory.swift */; };
+		BE7DF7462AC2DD49002B6D59 /* AdvertisementsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7DF7452AC2DD49002B6D59 /* AdvertisementsService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		BE7DF73F2AC2D08D002B6D59 /* Observable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 		BE7DF7412AC2D3FC002B6D59 /* URLRequest+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URLRequest+Extension.swift"; sourceTree = "<group>"; };
 		BE7DF7432AC2D9EC002B6D59 /* ViewsFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewsFactory.swift; sourceTree = "<group>"; };
+		BE7DF7452AC2DD49002B6D59 /* AdvertisementsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvertisementsService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,20 +130,20 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
-		BE7D1A1D2AC1A7A5007518F9 /* ProductsList */ = {
+		BE7D1A1D2AC1A7A5007518F9 /* AdvertisementsList */ = {
 			isa = PBXGroup;
 			children = (
 				BE7D19FF2AC184B2007518F9 /* AdvertisementsListViewController.swift */,
 				BE7D1A132AC18D6E007518F9 /* AdvertisementCell.swift */,
 				BE7D1A112AC18C2F007518F9 /* AdvertisementsListViewModel.swift */,
 			);
-			path = ProductsList;
+			path = AdvertisementsList;
 			sourceTree = "<group>";
 		};
 		BE7D1A1E2AC1A7BD007518F9 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				BE7D1A1D2AC1A7A5007518F9 /* ProductsList */,
+				BE7D1A1D2AC1A7A5007518F9 /* AdvertisementsList */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -160,6 +162,7 @@
 			children = (
 				BE7DF7392AC2CA74002B6D59 /* NetworkClient.swift */,
 				BE7DF73B2AC2CB24002B6D59 /* AdvertisementsModel.swift */,
+				BE7DF7452AC2DD49002B6D59 /* AdvertisementsService.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -239,6 +242,7 @@
 				BE7D1A1C2AC1A2DE007518F9 /* CollectionViewConfiguration.swift in Sources */,
 				BE7DF7442AC2D9EC002B6D59 /* ViewsFactory.swift in Sources */,
 				BE7DF73A2AC2CA74002B6D59 /* NetworkClient.swift in Sources */,
+				BE7DF7462AC2DD49002B6D59 /* AdvertisementsService.swift in Sources */,
 				BE7D1A212AC1B03C007518F9 /* Colors.swift in Sources */,
 				BE7D1A192AC18E18007518F9 /* UIView+Extensions.swift in Sources */,
 				BE7D1A002AC184B2007518F9 /* AdvertisementsListViewController.swift in Sources */,
