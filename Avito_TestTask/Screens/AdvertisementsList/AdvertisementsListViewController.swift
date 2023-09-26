@@ -129,6 +129,8 @@ extension AdvertisementsListViewController: UICollectionViewDelegateFlowLayout {
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
+        let destinationVC = AdvertisementDetailsViewController()
+        navigationController?.pushViewController(destinationVC, animated: true)
+        // Сделать роутер
     }
 }

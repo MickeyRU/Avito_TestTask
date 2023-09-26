@@ -11,6 +11,8 @@
 		BE45CB9D2AC303AA009C5511 /* AlertService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE45CB9C2AC303A9009C5511 /* AlertService.swift */; };
 		BE45CBA02AC30721009C5511 /* ProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = BE45CB9F2AC30721009C5511 /* ProgressHUD */; };
 		BE45CBA22AC30AAD009C5511 /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE45CBA12AC30AAD009C5511 /* MainNavigationController.swift */; };
+		BE45CBA42AC30C84009C5511 /* AdvertisementDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE45CBA32AC30C84009C5511 /* AdvertisementDetailsViewController.swift */; };
+		BE45CBA62AC30DF1009C5511 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE45CBA52AC30DF1009C5511 /* UIViewController+Extension.swift */; };
 		BE7D19FC2AC184B1007518F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7D19FB2AC184B1007518F9 /* AppDelegate.swift */; };
 		BE7D19FE2AC184B2007518F9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7D19FD2AC184B2007518F9 /* SceneDelegate.swift */; };
 		BE7D1A002AC184B2007518F9 /* AdvertisementsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7D19FF2AC184B2007518F9 /* AdvertisementsListViewController.swift */; };
@@ -39,6 +41,8 @@
 		BE45CB9A2AC2FD26009C5511 /* ScreenState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenState.swift; sourceTree = "<group>"; };
 		BE45CB9C2AC303A9009C5511 /* AlertService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertService.swift; sourceTree = "<group>"; };
 		BE45CBA12AC30AAD009C5511 /* MainNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationController.swift; sourceTree = "<group>"; };
+		BE45CBA32AC30C84009C5511 /* AdvertisementDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvertisementDetailsViewController.swift; sourceTree = "<group>"; };
+		BE45CBA52AC30DF1009C5511 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		BE7D19F82AC184B1007518F9 /* Avito_TestTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Avito_TestTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE7D19FB2AC184B1007518F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BE7D19FD2AC184B2007518F9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -130,6 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				BE7D1A182AC18E18007518F9 /* UIView+Extension.swift */,
+				BE45CBA52AC30DF1009C5511 /* UIViewController+Extension.swift */,
 				BE7DF73D2AC2CFC7002B6D59 /* URLSession+Extension.swift */,
 				BE7DF7412AC2D3FC002B6D59 /* URLRequest+Extension.swift */,
 				BE7DF7472AC2E421002B6D59 /* DateFormatters+Presets.swift */,
@@ -166,7 +171,7 @@
 			children = (
 				BE45CBA12AC30AAD009C5511 /* MainNavigationController.swift */,
 				BE7D1A1D2AC1A7A5007518F9 /* AdvertisementsList */,
-				BE7DF74D2AC2F10F002B6D59 /* AdvertisementsDetails */,
+				BE7DF74D2AC2F10F002B6D59 /* AdvertisementDetails */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -190,11 +195,12 @@
 			path = Network;
 			sourceTree = "<group>";
 		};
-		BE7DF74D2AC2F10F002B6D59 /* AdvertisementsDetails */ = {
+		BE7DF74D2AC2F10F002B6D59 /* AdvertisementDetails */ = {
 			isa = PBXGroup;
 			children = (
+				BE45CBA32AC30C84009C5511 /* AdvertisementDetailsViewController.swift */,
 			);
-			path = AdvertisementsDetails;
+			path = AdvertisementDetails;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -287,6 +293,7 @@
 				BE7D1A212AC1B03C007518F9 /* Colors.swift in Sources */,
 				BE7D1A192AC18E18007518F9 /* UIView+Extension.swift in Sources */,
 				BE7D1A002AC184B2007518F9 /* AdvertisementsListViewController.swift in Sources */,
+				BE45CBA42AC30C84009C5511 /* AdvertisementDetailsViewController.swift in Sources */,
 				BE7DF74A2AC2E426002B6D59 /* NumberFormatter+Presets.swift in Sources */,
 				BE45CB9D2AC303AA009C5511 /* AlertService.swift in Sources */,
 				BE45CBA22AC30AAD009C5511 /* MainNavigationController.swift in Sources */,
@@ -296,6 +303,7 @@
 				BE7DF73E2AC2CFC7002B6D59 /* URLSession+Extension.swift in Sources */,
 				BE7D1A122AC18C2F007518F9 /* AdvertisementsListViewModel.swift in Sources */,
 				BE7D1A232AC1B042007518F9 /* Fonts.swift in Sources */,
+				BE45CBA62AC30DF1009C5511 /* UIViewController+Extension.swift in Sources */,
 				BE7D19FE2AC184B2007518F9 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
