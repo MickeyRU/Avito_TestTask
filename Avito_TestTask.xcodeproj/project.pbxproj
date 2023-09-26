@@ -28,6 +28,7 @@
 		BE7DF7482AC2E421002B6D59 /* DateFormatters+Presets.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7DF7472AC2E421002B6D59 /* DateFormatters+Presets.swift */; };
 		BE7DF74A2AC2E426002B6D59 /* NumberFormatter+Presets.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7DF7492AC2E426002B6D59 /* NumberFormatter+Presets.swift */; };
 		BE7DF74C2AC2E968002B6D59 /* AdvertisementCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7DF74B2AC2E968002B6D59 /* AdvertisementCellModel.swift */; };
+		BE7DF7502AC2FB03002B6D59 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = BE7DF74F2AC2FB03002B6D59 /* Kingfisher */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE7DF7502AC2FB03002B6D59 /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -200,6 +202,9 @@
 			dependencies = (
 			);
 			name = Avito_TestTask;
+			packageProductDependencies = (
+				BE7DF74F2AC2FB03002B6D59 /* Kingfisher */,
+			);
 			productName = Avito_TestTask;
 			productReference = BE7D19F82AC184B1007518F9 /* Avito_TestTask.app */;
 			productType = "com.apple.product-type.application";
@@ -228,6 +233,9 @@
 				Base,
 			);
 			mainGroup = BE7D19EF2AC184B1007518F9;
+			packageReferences = (
+				BE7DF74E2AC2FB02002B6D59 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = BE7D19F92AC184B1007518F9 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -493,6 +501,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		BE7DF74E2AC2FB02002B6D59 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.9.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		BE7DF74F2AC2FB03002B6D59 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BE7DF74E2AC2FB02002B6D59 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = BE7D19F02AC184B1007518F9 /* Project object */;
 }

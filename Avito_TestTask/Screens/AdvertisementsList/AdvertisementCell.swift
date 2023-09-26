@@ -1,9 +1,10 @@
 import UIKit
+import Kingfisher
 
 final class AdvertisementCell: UICollectionViewCell {
     static let reuseIdentifier = "AdvertisementCell"
     
-    private let ImageView = ViewsFactory.shared.createImageView()
+    private let imageView = ViewsFactory.shared.createImageView()
     private let titleLabel = ViewsFactory.shared.createTextTitleLabel()
     private let priceLabel = ViewsFactory.shared.createTextPriceLabel()
     private let locationLabel = ViewsFactory.shared.createTextDescriptionLabel()
@@ -20,7 +21,7 @@ final class AdvertisementCell: UICollectionViewCell {
     }
     
     func configure(_ model: AdvertisementCellModel) {
-        self.ImageView.image = UIImage(named: "mock1")
+        self.imageView.kf.setImage(with: URL(string: model.imageUrl))
         self.titleLabel.text = model.title
         self.priceLabel.text = model.formattedPrice
         self.locationLabel.text = model.location
@@ -28,15 +29,15 @@ final class AdvertisementCell: UICollectionViewCell {
     }
     
     private func setupViews() {
-        [ImageView, titleLabel, priceLabel, locationLabel, createdAtLabel].forEach { contentView.addViewWithNoTAMIC($0) }
+        [imageView, titleLabel, priceLabel, locationLabel, createdAtLabel].forEach { contentView.addViewWithNoTAMIC($0) }
         
         NSLayoutConstraint.activate([
-            ImageView.topAnchor.constraint(equalTo: contentView.topAnchor),
-            ImageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
-            ImageView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
-            ImageView.heightAnchor.constraint(equalTo: ImageView.widthAnchor),
+            imageView.topAnchor.constraint(equalTo: contentView.topAnchor),
+            imageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
+            imageView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
+            imageView.heightAnchor.constraint(equalTo: imageView.widthAnchor),
             
-            titleLabel.topAnchor.constraint(equalTo: ImageView.bottomAnchor, constant: 5),
+            titleLabel.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 5),
             titleLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
             titleLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
             
@@ -46,11 +47,11 @@ final class AdvertisementCell: UICollectionViewCell {
             
             locationLabel.topAnchor.constraint(equalTo: priceLabel.bottomAnchor, constant: 5),
             locationLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
-            locationLabel.trailingAnchor.constraint(equalTo: ImageView.trailingAnchor),
+            locationLabel.trailingAnchor.constraint(equalTo: imageView.trailingAnchor),
             
-            createdAtLabel.topAnchor.constraint(equalTo: locationLabel.bottomAnchor),
-            createdAtLabel.leadingAnchor.constraint(equalTo: ImageView.leadingAnchor),
-            createdAtLabel.trailingAnchor.constraint(equalTo: ImageView.trailingAnchor)
+            createdAtLabel.topAnchor.constraint(equalTo: locationLabel.bottomAnchor, constant: 5),
+            createdAtLabel.leadingAnchor.constraint(equalTo: imageView.leadingAnchor),
+            createdAtLabel.trailingAnchor.constraint(equalTo: imageView.trailingAnchor)
         ])
     }
 }
