@@ -3,14 +3,15 @@ import Foundation
 extension DateFormatter {
     static var inputDateFormatter: DateFormatter = {
         let formatter = DateFormatter()
-        formatter.dateFormat = "yyyy-MM-dd" // Здесь укажите формат входной даты
+        formatter.locale = Locale(identifier: "ru_RU") // Изменить при Локализации приложения
+        formatter.dateFormat = "yyyy-MM-dd"
         return formatter
     }()
     
     static var outputDateFormatter: DateFormatter = {
         let formatter = DateFormatter()
-        formatter.locale = Locale(identifier: "ru_RU")
-        formatter.dateFormat = "d MMMM" // "14 августа"
+        formatter.locale = Locale(identifier: "ru_RU")  // Изменить при Локализации приложения
+        formatter.dateFormat = "d MMMM"
         return formatter
     }()
 }

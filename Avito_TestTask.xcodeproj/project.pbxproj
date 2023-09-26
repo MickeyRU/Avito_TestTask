@@ -14,7 +14,7 @@
 		BE7D1A082AC184B8007518F9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE7D1A062AC184B8007518F9 /* LaunchScreen.storyboard */; };
 		BE7D1A122AC18C2F007518F9 /* AdvertisementsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7D1A112AC18C2F007518F9 /* AdvertisementsListViewModel.swift */; };
 		BE7D1A142AC18D6E007518F9 /* AdvertisementCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7D1A132AC18D6E007518F9 /* AdvertisementCell.swift */; };
-		BE7D1A192AC18E18007518F9 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7D1A182AC18E18007518F9 /* UIView+Extensions.swift */; };
+		BE7D1A192AC18E18007518F9 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7D1A182AC18E18007518F9 /* UIView+Extension.swift */; };
 		BE7D1A1C2AC1A2DE007518F9 /* CollectionViewConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7D1A1B2AC1A2DE007518F9 /* CollectionViewConfiguration.swift */; };
 		BE7D1A212AC1B03C007518F9 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7D1A202AC1B03C007518F9 /* Colors.swift */; };
 		BE7D1A232AC1B042007518F9 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7D1A222AC1B042007518F9 /* Fonts.swift */; };
@@ -40,7 +40,7 @@
 		BE7D1A092AC184B8007518F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BE7D1A112AC18C2F007518F9 /* AdvertisementsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvertisementsListViewModel.swift; sourceTree = "<group>"; };
 		BE7D1A132AC18D6E007518F9 /* AdvertisementCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvertisementCell.swift; sourceTree = "<group>"; };
-		BE7D1A182AC18E18007518F9 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		BE7D1A182AC18E18007518F9 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		BE7D1A1B2AC1A2DE007518F9 /* CollectionViewConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewConfiguration.swift; sourceTree = "<group>"; };
 		BE7D1A202AC1B03C007518F9 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		BE7D1A222AC1B042007518F9 /* Fonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
@@ -119,7 +119,7 @@
 		BE7D1A172AC18E06007518F9 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				BE7D1A182AC18E18007518F9 /* UIView+Extensions.swift */,
+				BE7D1A182AC18E18007518F9 /* UIView+Extension.swift */,
 				BE7DF73D2AC2CFC7002B6D59 /* URLSession+Extension.swift */,
 				BE7DF7412AC2D3FC002B6D59 /* URLRequest+Extension.swift */,
 				BE7DF7472AC2E421002B6D59 /* DateFormatters+Presets.swift */,
@@ -152,6 +152,7 @@
 		BE7D1A1E2AC1A7BD007518F9 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				BE7DF74D2AC2F10F002B6D59 /* AdvertisementsDetails */,
 				BE7D1A1D2AC1A7A5007518F9 /* AdvertisementsList */,
 			);
 			path = Screens;
@@ -174,6 +175,13 @@
 				BE7DF7452AC2DD49002B6D59 /* AdvertisementsService.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		BE7DF74D2AC2F10F002B6D59 /* AdvertisementsDetails */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = AdvertisementsDetails;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -255,7 +263,7 @@
 				BE7DF73A2AC2CA74002B6D59 /* NetworkClient.swift in Sources */,
 				BE7DF7462AC2DD49002B6D59 /* AdvertisementsService.swift in Sources */,
 				BE7D1A212AC1B03C007518F9 /* Colors.swift in Sources */,
-				BE7D1A192AC18E18007518F9 /* UIView+Extensions.swift in Sources */,
+				BE7D1A192AC18E18007518F9 /* UIView+Extension.swift in Sources */,
 				BE7D1A002AC184B2007518F9 /* AdvertisementsListViewController.swift in Sources */,
 				BE7DF74A2AC2E426002B6D59 /* NumberFormatter+Presets.swift in Sources */,
 				BE7D19FC2AC184B1007518F9 /* AppDelegate.swift in Sources */,
