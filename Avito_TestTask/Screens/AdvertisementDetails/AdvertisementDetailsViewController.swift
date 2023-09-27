@@ -37,7 +37,7 @@ final class AdvertisementDetailsViewController: UIViewController {
             
             switch screenState {
             case .loading:
-                print("loading")
+                break
             case .error(let errorMessage):
                 self.showError(errorMessage)
             case .content:

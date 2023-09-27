@@ -8,6 +8,10 @@ final class AdvertisementsListViewController: UIViewController {
         return AlertService(viewController: self)
     }()
     
+    private lazy var router: RouterServiceProtocol = {
+        return RouterService(viewController: self)
+    }()
+    
     private lazy var advertisementsCollectionView: UICollectionView = {
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
         collectionView.backgroundColor = UIColor.unWhite
@@ -129,8 +133,7 @@ extension AdvertisementsListViewController: UICollectionViewDelegateFlowLayout {
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let destinationVC = AdvertisementDetailsViewController(viewModel: AdvertisementDetailsViewModel(advertisementID: viewModel.advertisements[indexPath.row].id))
-        navigationController?.pushViewController(destinationVC, animated: true)
-        // Сделать роутер
+        let id = viewModel.advertisements[indexPath.row].id
+        router.routeToEditingViewController(with: id)
     }
 }

@@ -34,7 +34,6 @@ final class AdvertisementDetailsViewModel: AdvertisementDetailsViewModelProtocol
             switch result {
             case .success(let advertisement):
                 self.advertisement = advertisement
-//                self.cellModels = advertisements.advertisements.map { AdvertisementCellModel(advertisement: $0) }
                 self.screenState = .content
             case .failure(let error):
                 self.screenState = .error(error.localizedDescription)

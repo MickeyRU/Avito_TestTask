@@ -16,7 +16,7 @@ final class DetailsImageCell: UITableViewCell, ReuseIdentifying {
     
     func configure(_ advertisement: AdvertisementDetailsModel) {
         self.advertisementImageView.kf.indicatorType = .activity
-        self.advertisementImageView.kf.setImage(with: URL(string: advertisement.imageURL))
+        self.advertisementImageView.kf.setImage(with: URL(string: advertisement.imageURL), placeholder: UIImage.emptyPhotoImage)
     }
     
     private func setupViews() {
