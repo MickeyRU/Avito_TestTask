@@ -1,7 +1,6 @@
 import UIKit
 import Kingfisher
 
-
 final class DetailsImageCell: UITableViewCell, ReuseIdentifying {
     private let advertisementImageView = ViewsFactory.shared.createImageView(cornerRadius: 0)
     
@@ -14,7 +13,7 @@ final class DetailsImageCell: UITableViewCell, ReuseIdentifying {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func configure(_ advertisement: AdvertisementDetailsModel) {
+    func configure(_ advertisement: AdvertisementDetailsCellModel) {
         self.advertisementImageView.kf.indicatorType = .activity
         self.advertisementImageView.kf.setImage(with: URL(string: advertisement.imageURL), placeholder: UIImage.emptyPhotoImage)
     }

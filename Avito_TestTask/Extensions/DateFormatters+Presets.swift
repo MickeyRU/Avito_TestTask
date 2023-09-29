@@ -14,4 +14,9 @@ extension DateFormatter {
         formatter.dateFormat = "d MMMM"
         return formatter
     }()
+    
+    static func formatDate(_ date: String) -> String {
+        guard let date = inputDateFormatter.date(from: date) else { return date }
+        return outputDateFormatter.string(from: date)
+    }
 }

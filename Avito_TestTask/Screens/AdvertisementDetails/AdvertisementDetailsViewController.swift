@@ -9,8 +9,10 @@ final class AdvertisementDetailsViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(DetailsImageCell.self)
+        tableView.register(DetailsDescriptionCell.self)
         tableView.separatorStyle = .none
         tableView.showsVerticalScrollIndicator = false
+        tableView.allowsSelection = false
         return tableView
     }()
     
@@ -26,7 +28,7 @@ final class AdvertisementDetailsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-                
+        
         setupNavigationBar()
         setupViews()
     }
@@ -37,7 +39,7 @@ final class AdvertisementDetailsViewController: UIViewController {
             
             switch screenState {
             case .loading:
-                break
+                self.showLoading()
             case .error(let errorMessage):
                 self.showError(errorMessage)
             case .content:
@@ -45,8 +47,17 @@ final class AdvertisementDetailsViewController: UIViewController {
             }
         }
     }
-
+    
+    private func showLoading() {
+        ProgressHUD.show()
+    }
+    
+    private func hideLoading() {
+        ProgressHUD.dismiss()
+    }
+    
     private func showError(_ errorMessage: String) {
+        self.hideLoading()
         let reloadAction = UIAlertAction(title: "Перезагрузить", style: .default) { _ in
             self.viewModel.loadData()
         }
@@ -56,6 +67,7 @@ final class AdvertisementDetailsViewController: UIViewController {
     }
     
     private func showContent() {
+        self.hideLoading()
         self.detailsTableView.reloadData()
     }
     
@@ -82,22 +94,36 @@ final class AdvertisementDetailsViewController: UIViewController {
 
 extension AdvertisementDetailsViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        1
+        2
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell: DetailsImageCell = tableView.dequeueReusableCell()
-        guard let advertisement = viewModel.advertisement else { return UITableViewCell() }
-        cell.configure(advertisement)
-        return cell
+        guard let advertisement = viewModel.cellModel else { return UITableViewCell() }
+        switch indexPath.row {
+        case 0:
+            let cell: DetailsImageCell = tableView.dequeueReusableCell()
+            cell.configure(advertisement)
+            return cell
+        case 1:
+            let cell: DetailsDescriptionCell = tableView.dequeueReusableCell()
+            cell.configure(advertisement)
+            return cell
+        default:
+            return UITableViewCell()
+        }
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        tableView.bounds.width
+        switch indexPath.row {
+        case 0:
+            return tableView.bounds.width
+        default:
+            return UITableView.automaticDimension
+        }
     }
 }
 
-// MARK: - UITableViewDataSource
+// MARK: - UITableViewDelegate
 
 extension AdvertisementDetailsViewController: UITableViewDelegate {
     

@@ -10,26 +10,19 @@ final class ViewsFactory {
         imageView.contentMode = .scaleAspectFill
         return imageView
     }
-    
-    func createTextTitleLabel() -> UILabel {
+
+    func createBoldLabel(ofSize: CGFloat) -> UILabel {
         let label = UILabel()
-        label.font = UIFont.sfRegular15
+        label.font = UIFont.makeBoldFont(ofSize: ofSize)
         label.textColor = UIColor.unBlack
         return label
     }
     
-    func createTextPriceLabel() -> UILabel {
+    func createRegularLabel(ofSize: CGFloat,  color: UIColor, numberOfLines: Int) -> UILabel {
         let label = UILabel()
-        label.font = UIFont.sfBold17
-        label.textColor = UIColor.unBlack
-        return label
-        
-    }
-    
-    func createTextDescriptionLabel() -> UILabel {
-        let label = UILabel()
-        label.font = UIFont.sfRegular13
-        label.textColor = UIColor.unGray
+        label.font = UIFont.makeRegularFont(ofSize: ofSize)
+        label.numberOfLines = numberOfLines
+        label.textColor = color
         return label
     }
 }

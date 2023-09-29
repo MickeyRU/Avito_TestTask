@@ -3,10 +3,10 @@ import Kingfisher
 
 final class AdvertisementCell: UICollectionViewCell, ReuseIdentifying {    
     private let imageView = ViewsFactory.shared.createImageView(cornerRadius: 10)
-    private let titleLabel = ViewsFactory.shared.createTextTitleLabel()
-    private let priceLabel = ViewsFactory.shared.createTextPriceLabel()
-    private let locationLabel = ViewsFactory.shared.createTextDescriptionLabel()
-    private let createdAtLabel = ViewsFactory.shared.createTextDescriptionLabel()
+    private let titleLabel = ViewsFactory.shared.createRegularLabel(ofSize: 15, color: .unBlack, numberOfLines: 1)
+    private let priceLabel = ViewsFactory.shared.createBoldLabel(ofSize: 17)
+    private let locationLabel = ViewsFactory.shared.createRegularLabel(ofSize: 13, color: .unGray, numberOfLines: 1)
+    private let createdAtLabel = ViewsFactory.shared.createRegularLabel(ofSize: 13, color: .unGray, numberOfLines: 1)
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -20,7 +20,7 @@ final class AdvertisementCell: UICollectionViewCell, ReuseIdentifying {
     
     func configure(_ model: AdvertisementCellModel) {
         self.imageView.kf.indicatorType = .activity
-        self.imageView.kf.setImage(with: URL(string: model.imageUrl), placeholder: UIImage.emptyPhotoImage)
+        self.imageView.kf.setImage(with: URL(string: model.imageURL), placeholder: UIImage.emptyPhotoImage)
         self.titleLabel.text = model.title
         self.priceLabel.text = model.formattedPrice
         self.locationLabel.text = model.location

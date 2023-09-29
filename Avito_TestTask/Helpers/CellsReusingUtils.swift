@@ -1,6 +1,6 @@
 import UIKit
 
-// Набор методов упрощающих регистрацию ячеек
+// Набор расширений упрощающих регистрацию ячеек для коллекций
 
 protocol ReuseIdentifying {
     static var defaultReuseIdentifier: String { get }
@@ -50,6 +50,7 @@ extension UICollectionView {
             assertionFailure("Could not dequeue cell with identifier: \(T.defaultReuseIdentifier) for: \(indexPath)")
             return T()
         }
+        
         return cell
     }
 
@@ -58,6 +59,7 @@ extension UICollectionView {
             assertionFailure("Could not get cell with type: \(T.self)")
             return T()
         }
+        
         return cell
     }
 }
