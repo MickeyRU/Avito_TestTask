@@ -37,6 +37,8 @@ final class DetailsDescriptionCell: UITableViewCell, ReuseIdentifying {
     }
     
     private func setupViews() {
+        contentView.backgroundColor = UIColor.unWhite
+        
         [priceLabel, titleLabel, descriptionTitleLabel, descriptionLabel, sellerTitleLabel, emailLabel, phoneNumberLabel, addressLabel, createdAtLabel].forEach { contentView.addViewWithNoTAMIC($0) }
         
         NSLayoutConstraint.activate([
@@ -65,11 +67,11 @@ final class DetailsDescriptionCell: UITableViewCell, ReuseIdentifying {
             emailLabel.leadingAnchor.constraint(equalTo: sellerTitleLabel.leadingAnchor),
             emailLabel.trailingAnchor.constraint(equalTo: sellerTitleLabel.trailingAnchor),
             
-            phoneNumberLabel.topAnchor.constraint(equalTo: emailLabel.bottomAnchor),
+            phoneNumberLabel.topAnchor.constraint(equalTo: emailLabel.bottomAnchor, constant: 2),
             phoneNumberLabel.leadingAnchor.constraint(equalTo: emailLabel.leadingAnchor),
             phoneNumberLabel.trailingAnchor.constraint(equalTo: emailLabel.trailingAnchor),
             
-            addressLabel.topAnchor.constraint(equalTo: phoneNumberLabel.bottomAnchor),
+            addressLabel.topAnchor.constraint(equalTo: phoneNumberLabel.bottomAnchor, constant: 2),
             addressLabel.leadingAnchor.constraint(equalTo: phoneNumberLabel.leadingAnchor),
             addressLabel.trailingAnchor.constraint(equalTo: phoneNumberLabel.trailingAnchor),
             

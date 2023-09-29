@@ -6,6 +6,7 @@ final class AdvertisementDetailsViewController: UIViewController {
     
     private lazy var detailsTableView: UITableView = {
         let tableView = UITableView()
+        tableView.backgroundColor = UIColor.unWhite
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(DetailsImageCell.self)

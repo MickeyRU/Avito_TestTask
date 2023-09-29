@@ -19,6 +19,8 @@ final class DetailsImageCell: UITableViewCell, ReuseIdentifying {
     }
     
     private func setupViews() {
+        contentView.backgroundColor = UIColor.unWhite
+
         contentView.addViewWithNoTAMIC(advertisementImageView)
         
         NSLayoutConstraint.activate([
