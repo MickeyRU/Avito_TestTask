@@ -5,10 +5,10 @@
 # 🖼️ **Скриншоты**:
 
 <p float="left">
-  <img src="https://github.com/MickeyRU/Avito_TestTask/assets/91372236/026ee45a-d660-41a3-acfe-f3302c0752ed" width="23%" />
-  <img src="https://github.com/MickeyRU/Avito_TestTask/assets/91372236/b4ddbeff-38c8-427d-a44c-7f4a42369dfa" width="23%" /> 
-  <img src="https://github.com/MickeyRU/Avito_TestTask/assets/91372236/4851dbea-e558-4dad-ad39-3923097e0bb7" width="23%" />
-  <img src="https://github.com/MickeyRU/Avito_TestTask/assets/91372236/ca30f64e-b2d7-4cbe-b8f8-34364896d4f1" width="23%" />
+  <img src="https://github.com/MickeyRU/Avito_TestTask/assets/91372236/ea720ade-ed9e-4fb2-bab2-859b43bd2750" width="23%" />
+  <img src="https://github.com/MickeyRU/Avito_TestTask/assets/91372236/b05d2b94-5e8a-49dd-9358-c7765c36b418" width="23%" /> 
+  <img src="https://github.com/MickeyRU/Avito_TestTask/assets/91372236/9d7a7e39-f701-406d-9892-49bbbe028779" width="23%" />
+  <img src="https://github.com/MickeyRU/Avito_TestTask/assets/91372236/067b27f0-4a1d-4b1b-b8cf-f0b7185188e6" width="23%" />
 </p>
 
 # 🔍 **Основные Функции**:
